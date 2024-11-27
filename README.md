@@ -1,14 +1,14 @@
-RBAC-UI (Role-Based Access Control User Interface)
+## RBAC-UI (Role-Based Access Control User Interface)
 This project is a web application designed to manage users, roles, permissions, and logs within a Role-Based Access Control (RBAC) system. It is built using React, Material-UI, and demonstrates modular component design and API integration.
 
-Features
+## Features
 User Management: View, add, and delete users with integrated API calls.
 Role Management: Assign and manage permissions for roles.
 Sidebar Navigation: Dynamic sidebar menu with active state tracking.
 Dark Mode: Implemented using Context API to toggle themes.
 Dashboard: Displays an overview of the application's key metrics.
 
-Folder Structure:
+## Folder Structure:
 
 rbac-ui/
 │
@@ -32,49 +32,49 @@ rbac-ui/
 │   └── api.js            
 └── package.json   
 
-Installation
+## Installation
 Clone the Repository
 
 git clone https://github.com/your-username/rbac-ui.git
 cd rbac-ui
 
-Install Dependencies
+## Install Dependencies
 
 Ensure you have Node.js installed:
 npm install
 
-Start the Development Server
+## Start the Development Server
 
 npm start
 The app will be accessible at http://localhost:3000.
 
-Run the Mock API Server
+## Run the Mock API Server
 
 If you're using json-server for mock APIs, start it with:
 
 npx json-server --watch src/data/db.json --port 5000
 
-The API endpoints will be available at:
+## The API endpoints will be available at:
 
 http://localhost:5000/users
 http://localhost:5000/roles
 http://localhost:5000/permissions
 http://localhost:5000/logs
 
-Usage
+## Usage
 Sidebar Navigation: Switch between different sections like Dashboard, Users, Roles, and Logs.
 Theme Toggle: Enable or disable dark mode using the toggle button.
 User Management: Add or delete users directly from the Users page.
 Role Management: Assign and modify roles with their respective permissions.
 
-Technologies Used
+## Technologies Used
 React: For building the user interface.
 Material-UI: For modern and responsive UI components.
 React Router: For client-side routing.
 Context API: For global state management (theme and authentication).
 JSON Server: For mock backend data.
 
-Troubleshooting
+## Troubleshooting
 "Cannot destructure property 'darkMode'"
 Ensure that ThemeContext is correctly set up and the ThemeProvider wraps the App component.
 
