@@ -1,0 +1,98 @@
+{
+  "users": [
+    {
+      "id": "2",
+      "name": "Bob",
+      "role": "Editor",
+      "status": "Inactive"
+    },
+    {
+      "id": "1",
+      "name": "Alice",
+      "role": "Admin",
+      "status": "Active"
+    },
+    {
+      "id": "f799",
+      "name": "jyothsna",
+      "role": "admin"
+    },
+    {
+      "id": "f741",
+      "name": "main",
+      "role": "Admin"
+    },
+    {
+      "id": "052d",
+      "name": "Arya",
+      "role": "Editor"
+    },
+    {
+      "id": "94a4",
+      "name": "jyothsna",
+      "role": "viewer"
+    },
+    {
+      "id": "8313",
+      "name": "nani",
+      "role": "user"
+    },
+    {
+      "id": "815b",
+      "name": "me",
+      "role": "Admin",
+      "status": "Active"
+    }
+  ],
+  "roles": [
+    {
+      "id": "1",
+      "name": "Admin",
+      "permissions": {
+        "read": true,
+        "write": true,
+        "delete": true
+      }
+    },
+    {
+      "id": "2",
+      "name": "Editor",
+      "permissions": {
+        "read": true,
+        "write": true,
+        "delete": false
+      }
+    },
+    {
+      "id": "3",
+      "name": "Viewer",
+      "permissions": {
+        "read": true
+      }
+    },
+    {
+      "id": "1fef",
+      "name": "user",
+      "permissions": {
+        "read": true,
+        "write": false,
+        "delete": false
+      }
+    }
+  ],
+  "permissions": [
+    {
+      "id": "1",
+      "name": "Read"
+    },
+    {
+      "id": "2",
+      "name": "Write"
+    },
+    {
+      "id": "3",
+      "name": "Delete"
+    }
+  ],
+  "logs": []
+}
