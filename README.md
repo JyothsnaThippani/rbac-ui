@@ -1,70 +1,88 @@
-# Getting Started with Create React App
+RBAC-UI (Role-Based Access Control User Interface)
+This project is a web application designed to manage users, roles, permissions, and logs within a Role-Based Access Control (RBAC) system. It is built using React, Material-UI, and demonstrates modular component design and API integration.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Features
+User Management: View, add, and delete users with integrated API calls.
+Role Management: Assign and manage permissions for roles.
+Sidebar Navigation: Dynamic sidebar menu with active state tracking.
+Dark Mode: Implemented using Context API to toggle themes.
+Dashboard: Displays an overview of the application's key metrics.
 
-## Available Scripts
+Folder Structure:
 
-In the project directory, you can run:
+rbac-ui/
+│
+├── public/                
+├── src/                   
+│   ├── components/        
+│   │   ├── Navbar.jsx     
+│   │   ├── Sidebar.jsx    
+│   │   ├── Users.jsx      
+│   │   ├── Roles.jsx      
+│   │   ├── Dashboard.jsx  
+│   │   └── EditableTable.jsx 
+│   ├── context/           
+│   │   ├── ThemeContext.jsx
+│   │   └── AuthContext.jsx
+│   ├── hooks/             
+│   ├── data/              
+│   │   └── db.json        
+│   ├── App.jsx            
+│   ├── index.js           
+│   └── api.js            
+└── package.json   
 
-### `npm start`
+Installation
+Clone the Repository
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+git clone https://github.com/your-username/rbac-ui.git
+cd rbac-ui
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Install Dependencies
 
-### `npm test`
+Ensure you have Node.js installed:
+npm install
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Start the Development Server
 
-### `npm run build`
+npm start
+The app will be accessible at http://localhost:3000.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Run the Mock API Server
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+If you're using json-server for mock APIs, start it with:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+npx json-server --watch src/data/db.json --port 5000
 
-### `npm run eject`
+The API endpoints will be available at:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+http://localhost:5000/users
+http://localhost:5000/roles
+http://localhost:5000/permissions
+http://localhost:5000/logs
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Usage
+Sidebar Navigation: Switch between different sections like Dashboard, Users, Roles, and Logs.
+Theme Toggle: Enable or disable dark mode using the toggle button.
+User Management: Add or delete users directly from the Users page.
+Role Management: Assign and modify roles with their respective permissions.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Technologies Used
+React: For building the user interface.
+Material-UI: For modern and responsive UI components.
+React Router: For client-side routing.
+Context API: For global state management (theme and authentication).
+JSON Server: For mock backend data.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Troubleshooting
+"Cannot destructure property 'darkMode'"
+Ensure that ThemeContext is correctly set up and the ThemeProvider wraps the App component.
 
-## Learn More
+API Errors
+Verify the mock API server is running (json-server) and the endpoints match the frontend API calls in api.js.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Sidebar State Issues
+Ensure the useState hook in Sidebar.jsx is properly managing the active state.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Contributing
+Feel free to fork this repository and make contributions by submitting a pull request.
